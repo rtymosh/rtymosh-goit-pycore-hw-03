@@ -68,7 +68,10 @@ lottery_numbers = get_numbers_ticket(1, 49, 6)
 print("Ваші лотерейні числа:", lottery_numbers)
 # Invalid case: min is less than 1
 lottery_numbers = get_numbers_ticket(0, 49, 6)
-# print("Ваші лотерейні числа:", lottery_numbers)
+print("Ваші лотерейні числа:", lottery_numbers)
 # Invalid case: quantity is greater than the range
-lottery_numbers = get_numbers_ticket(1, 49, 49)
+lottery_numbers = get_numbers_ticket(1, 49, 50)
+print("Ваші лотерейні числа:", lottery_numbers)
+# Invalid case: max is greater than 1000
+lottery_numbers = get_numbers_ticket(1, 1000, 50)
 print("Ваші лотерейні числа:", lottery_numbers)
