@@ -39,7 +39,7 @@ def get_days_from_today(date: str) -> int:
         given_date = datetime.strptime(
             date, "%Y-%m-%d"
         )  # convert string to datetime object
-        current_date = datetime.today()  # calculate the difference in days
+        current_date = datetime.today()  # get current date
         delta = current_date - given_date  # calculate the difference in days
     except ValueError:
         print(
