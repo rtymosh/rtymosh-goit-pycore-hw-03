@@ -70,5 +70,5 @@ print("Ваші лотерейні числа:", lottery_numbers)
 lottery_numbers = get_numbers_ticket(0, 49, 6)
 # print("Ваші лотерейні числа:", lottery_numbers)
 # Invalid case: quantity is greater than the range
-lottery_numbers = get_numbers_ticket(1, 49, 6)
+lottery_numbers = get_numbers_ticket(1, 49, 49)
 print("Ваші лотерейні числа:", lottery_numbers)
