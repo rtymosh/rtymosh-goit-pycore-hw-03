@@ -40,3 +40,35 @@
 
 # Цей код викликає функцію get_numbers_ticket з параметрами min=1, max=49 та quantity=6. В результаті ви отримаєте список з 6 випадковими, унікальними та відсортованими числами,
 # наприклад, [4, 15, 23, 28, 37, 45]. Кожен раз при виклику функції ви отримуватимете різний набір чисел.
+
+
+def get_numbers_ticket(min: int, max: int, quantity: int) -> list[int]:
+    import random
+
+    # validation of input parameters and return empty list if invalid
+    if min < 1 or max > 1000 or quantity > (max - min + 1):
+        return []
+    # set default values for counter and unique numbers set
+    counter = 0
+    unique_numbers = set()
+    # loop until we get the required quantity of unique numbers
+    while quantity > counter:
+        random_value = random.randint(min, max)
+        if (
+            random_value not in unique_numbers
+        ):  # check for uniqueness random value in set
+            unique_numbers.add(random_value)
+            counter += 1
+    return sorted(unique_numbers)  # return sorted list of unique numbers
+
+
+# Example usage:
+# Valid case
+lottery_numbers = get_numbers_ticket(1, 49, 6)
+print("Ваші лотерейні числа:", lottery_numbers)
+# Invalid case: min is less than 1
+lottery_numbers = get_numbers_ticket(0, 49, 6)
+# print("Ваші лотерейні числа:", lottery_numbers)
+# Invalid case: quantity is greater than the range
+lottery_numbers = get_numbers_ticket(1, 49, 6)
+print("Ваші лотерейні числа:", lottery_numbers)
