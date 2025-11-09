@@ -58,7 +58,7 @@ from datetime import datetime, timedelta
 
 def get_upcoming_birthdays(users):
     # Get current date
-    today = datetime.today().date() - timedelta(days=6)
+    today = datetime.today().date()
     print("Today is:", today)
     # Initialize list for upcoming birthdays
     upcoming_birthdays = []
